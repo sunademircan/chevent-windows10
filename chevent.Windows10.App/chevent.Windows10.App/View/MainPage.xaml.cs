@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,9 +23,21 @@ namespace chevent.Windows10.App
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public static MainPage Current;
         public MainPage()
         {
             this.InitializeComponent();
+            //Current = this;
+            //GetData();
         }
+
+        //private async void GetData()
+        //{
+        //    string BaseUri = "";
+        //    HttpClient client = new HttpClient();
+        //    string jsonString = await client.GetStringAsync(BaseUri);
+        //    //Current.DataContext = new 
+        //}
     }
 }
